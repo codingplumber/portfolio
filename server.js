@@ -7,7 +7,8 @@ const express = require('express'),
 const app = module.exports = express();
 
 app.use(bodyParser.json());
-app.use(express.static(__dirname + '/dist'));
+app.use(express.static(__dirname));
+// app.use(express.static(__dirname + '/dist'));
 
 app.listen(config.port, () => {
     console.log(`listening on port ${config.port}`)
